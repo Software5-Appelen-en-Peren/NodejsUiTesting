@@ -1,0 +1,82 @@
+[
+  {
+    "description": "    As a Warranty Warrior user\n    I want to visit the Warranty Warrior website\n    So that I can Login into my account",
+    "keyword": "Feature",
+    "name": "Warranty Warrior Login",
+    "line": 1,
+    "id": "warranty-warrior-login",
+    "tags": [],
+    "uri": "tests\\features\\login.feature",
+    "elements": [
+      {
+        "id": "warranty-warrior-login;visit-the-login-page",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Visit the Login page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "tests\\features\\support\\hook.js:54"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5042000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\tangu\\Documents\\GitHub\\NodejsUiTesting\\node_modules\\cucumber\\lib\\user_code_runner.js:76:18)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see a text box for entering the email",
+            "match": {
+              "location": "tests\\features\\support\\loginSteps.js:8"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I should see a text box for entering the password",
+            "match": {
+              "location": "tests\\features\\support\\loginSteps.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I should see a login button",
+            "match": {
+              "location": "tests\\features\\support\\loginSteps.js:18"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "tests\\features\\support\\hook.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
