@@ -1,9 +1,11 @@
-Feature: Warranty Warrior Login
-    As a Warranty Warrior user
-    I want to visit the Warranty Warrior website
-    So that I can Login into my account
+Feature: User logs in 
 
-  Scenario: Visit the Login page
-      Then I should see a text box for entering the email
-      And I should see a text box for entering the password
-      And I should see a login button
+Scenario Outline: User wants to login in the app 
+
+Given User is on the login page and types in "<email>" in email textbox and "<password>" in password text box  
+When User presses login button 
+Then User should be send to members page
+
+Examples:
+    | email                             | password      |
+    | a@hotmail.com                     | a@hotmail.com |

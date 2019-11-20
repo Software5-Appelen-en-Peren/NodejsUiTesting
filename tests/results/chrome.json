@@ -1,78 +1,174 @@
 [
   {
-    "description": "    As a Warranty Warrior user\n    I want to visit the Warranty Warrior website\n    So that I can Login into my account",
     "keyword": "Feature",
-    "name": "Warranty Warrior Login",
+    "name": "Add a product",
     "line": 1,
-    "id": "warranty-warrior-login",
+    "id": "add-a-product",
     "tags": [],
-    "uri": "tests\\features\\login.feature",
+    "uri": "tests\\features\\AddProduct.feature",
     "elements": [
       {
-        "id": "warranty-warrior-login;visit-the-login-page",
+        "id": "add-a-product;user-wants-to-add-a-product",
         "keyword": "Scenario",
-        "line": 6,
-        "name": "Visit the Login page",
+        "line": 11,
+        "name": "User wants to add a product",
         "tags": [],
         "type": "scenario",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is connected with email \"a@hotmail.com\" and password \"a@hotmail.com\" and logs in",
             "match": {
-              "location": "tests\\features\\support\\hook.js:54"
+              "location": "tests\\features\\support\\addProduct.js:23"
             },
             "result": {
               "status": "failed",
-              "duration": 5042000000,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\tangu\\Documents\\GitHub\\NodejsUiTesting\\node_modules\\cucumber\\lib\\user_code_runner.js:76:18)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)"
+              "duration": 10008000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 10000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\tangu\\Documents\\GitHub\\NodejsUiTesting\\node_modules\\cucumber\\lib\\user_code_runner.js:76:18)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User goes to page addProduct and types in datefield \"2019-02-02\" and productnamefield \"TestProduct\" and productpricefield \"50.00\" and warrantylengthfield \"2050-01-01\" and storefield \"Apple\" and notefield \"this is a note\"",
+            "match": {
+              "location": "tests\\features\\support\\addProduct.js:30"
+            },
+            "result": {
+              "status": "skipped"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I should see a text box for entering the email",
+            "name": "product should be successfully created",
             "match": {
-              "location": "tests\\features\\support\\loginSteps.js:8"
+              "location": "tests\\features\\support\\addProduct.js:42"
             },
             "result": {
               "status": "skipped"
             }
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "User logs in",
+    "line": 1,
+    "id": "user-logs-in",
+    "tags": [],
+    "uri": "tests\\features\\login.feature",
+    "elements": [
+      {
+        "id": "user-logs-in;user-wants-to-login-in-the-app",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User wants to login in the app",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
           {
             "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I should see a text box for entering the password",
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on the login page and types in \"a@hotmail.com\" in email textbox and \"a@hotmail.com\" in password text box",
             "match": {
-              "location": "tests\\features\\support\\loginSteps.js:13"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "I should see a login button",
-            "match": {
-              "location": "tests\\features\\support\\loginSteps.js:18"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "tests\\features\\support\\hook.js:73"
+              "location": "tests\\features\\support\\loginSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 14032000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User presses login button",
+            "match": {
+              "location": "tests\\features\\support\\loginSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1221000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should be send to members page",
+            "match": {
+              "location": "tests\\features\\support\\loginSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3212000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "log out a user",
+    "line": 1,
+    "id": "log-out-a-user",
+    "tags": [],
+    "uri": "tests\\features\\logOutUser.feature",
+    "elements": [
+      {
+        "id": "log-out-a-user;user-wants-to-log-out-from-the-website",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User wants to log out from the website",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User with \"a@hotmail.com\" and password \"a@hotmail.com\" is on the login page",
+            "match": {
+              "location": "tests\\features\\support\\logoutUser.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4057000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user press log out button",
+            "match": {
+              "location": "tests\\features\\support\\logoutUser.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3599000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the user is logged out",
+            "match": {
+              "location": "tests\\features\\support\\logoutUser.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3022000000
             }
           }
         ]
