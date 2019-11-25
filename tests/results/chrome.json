@@ -1,6 +1,65 @@
 [
   {
     "keyword": "Feature",
+    "name": "Add a incorrect product",
+    "line": 1,
+    "id": "add-a-incorrect-product",
+    "tags": [],
+    "uri": "tests\\features\\AddIncorrectProduct.feature",
+    "elements": [
+      {
+        "id": "add-a-incorrect-product;user-wants-to-add-a-incorrect-product",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User wants to add a incorrect product",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is connected with e-mail \"a@hotmail.com\" and password \"a@hotmail.com\" and logs in",
+            "match": {
+              "location": "tests\\features\\support\\addIncorrectProduct.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7916000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User goes to page addProduct and types in datefield \"2019-02-02\" and productpricefield \"50.00\" and warrantylengthfield \"2050-01-01\" and notefield \"this is a note\"",
+            "match": {
+              "location": "tests\\features\\support\\addIncorrectProduct.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5508000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "an error should be thrown",
+            "match": {
+              "location": "tests\\features\\support\\addIncorrectProduct.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
     "name": "Add a product",
     "line": 1,
     "id": "add-a-product",
@@ -24,9 +83,8 @@
               "location": "tests\\features\\support\\addProduct.js:23"
             },
             "result": {
-              "status": "failed",
-              "duration": 10008000000,
-              "error_message": "Error: function timed out, ensure the promise resolves within 10000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\tangu\\Documents\\GitHub\\NodejsUiTesting\\node_modules\\cucumber\\lib\\user_code_runner.js:76:18)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)"
+              "status": "passed",
+              "duration": 1662000000
             }
           },
           {
@@ -38,7 +96,8 @@
               "location": "tests\\features\\support\\addProduct.js:30"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 5604000000
             }
           },
           {
@@ -50,7 +109,8 @@
               "location": "tests\\features\\support\\addProduct.js:42"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -83,7 +143,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14032000000
+              "duration": 1399000000
             }
           },
           {
@@ -96,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1221000000
+              "duration": 161000000
             }
           },
           {
@@ -109,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3212000000
+              "duration": 3012000000
             }
           }
         ]
@@ -142,7 +202,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4057000000
+              "duration": 1482000000
             }
           },
           {
@@ -155,7 +215,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3599000000
+              "duration": 3128000000
             }
           },
           {
@@ -168,7 +228,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3022000000
+              "duration": 3014000000
             }
           }
         ]

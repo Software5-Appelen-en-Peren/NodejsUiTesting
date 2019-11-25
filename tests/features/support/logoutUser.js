@@ -8,7 +8,7 @@ const PAGE_USERPASSWORD_TEXTBOX = 'password-input';
 const PAGE_LOGIN_BUTTON = 'loginbtn';
 const CLASS_USER_EMAIL = 'member-name';
 
-
+// before ? = login ?
 Given('User with {string} and password {string} is on the login page', async function (email,  password) {
     await driver.get('http://localhost:8080/login');
     await driver.findElement(By.id(PAGE_USEREMAIL_TEXTBOX)).sendKeys(email);
